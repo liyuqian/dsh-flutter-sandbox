@@ -1,0 +1,43 @@
+{
+  "name": "dsh-flutter-sandbox",
+  "version": "0.1.0",
+  "description": "dsh plugin: let workspace-write sandboxed commands write the Flutter SDK, pub cache, Dart/Flutter settings, Gradle, and Android directories.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "roots.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "flutter",
+    "dart",
+    "sandbox"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liyuqian/dsh-flutter-sandbox.git"
+  },
+  "license": "MIT",
+  "author": "Yuqian Li",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-sandbox-local": ">=0.1.1-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

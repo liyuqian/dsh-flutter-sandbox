@@ -1,0 +1,7 @@
+# Replace the stock sandbox provider with one that also grants Flutter's
+# directories outside the workspace under workspace-write.
+- id: sandbox
+  disabled: true
+- insert:
+    - id: sandbox-flutter
+      name: dsh-flutter-sandbox
